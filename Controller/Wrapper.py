@@ -26,19 +26,8 @@ class FfmpegWrapper:
             'h264',
             '-i',
             f'https://{self.controller.config["cameraip"]}:19443/https/stream/mixed?video=h264&audio=g711&resolution=hd',
-            '-map',
-            '0',
-            '-vcodec',
-            'copy',
-            '-preset',
-            'veryfast',
-            '-f',
-            'flv',
-            f'rtmp://localhost/live/{self.controller.config["cameraname"]}',
-            '-map',
-            '0',
             '-r',
-            '1/5',
+            '1/5',  # One frame every 5 seconds
             '-update',
             '1',
             '-y',
@@ -59,4 +48,3 @@ class FfmpegWrapper:
     def __init__(self, controller, healthCheckSleepInterval):
         self.controller = controller
         self.authToken = self.buildAuthToken()
-

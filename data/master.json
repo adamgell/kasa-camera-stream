@@ -1,0 +1,14 @@
+{
+    "kasausername": "me@adamgell.com",
+    "kasapassword": "bqc3urn*JXJ4bqv@nwu",
+    "cameras": [
+        {
+            "cameraip": "192.168.2.79",
+            "cameraname": "frontdrive"
+        },
+        {
+            "cameraip": "192.168.2.56",
+            "cameraname": "backyard"
+        }
+    ]
+  }

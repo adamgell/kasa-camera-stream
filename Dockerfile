@@ -14,14 +14,15 @@ RUN apk add --no-cache \
     nginx \
     nginx-mod-rtmp \
     python3 \
-    py-pip
+    py-pip \
+    py3-requests
 
 # Install python dependencies
-RUN pip install -r /Controller/requirements.txt
+# RUN pip install -r /Controller/requirements.txt
 
 # Nginx setup
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
-RUN mkdir /run/nginx
+RUN mkdir -p /run/nginx
 RUN mkdir -p /tmp/streaming/thumbnails
 RUN mkdir /tmp/streaming/hls
 

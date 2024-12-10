@@ -1,5 +1,4 @@
 import json
-import requests
 import asyncio
 
 class HealthChecker:
@@ -10,8 +9,9 @@ class HealthChecker:
 
     def checkHealth(self):        
         # Make request to HLS endpoint. Typically we get a 404 if things are broken.
-        hlsResponse = requests.get(url=f'http://localhost/hls/{self.controller.config["cameraname"]}.m3u8')
-        return hlsResponse.status_code == 404
+        #hlsResponse = grequests.get(url=f'http://localhost/hls/{self.controller.config["cameraname"]}.m3u8')
+        #return hlsResponse.status_code == 404
+        return False
 
     async def start(self):
         print("[HealthChecker] Starting health checker.")
