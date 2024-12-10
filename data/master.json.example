@@ -1,0 +1,14 @@
+{
+    "kasausername": "",
+    "kasapassword": "",
+    "cameras": [
+        {
+            "cameraip": "",
+            "cameraname": ""
+        },
+        {
+            "cameraip": "",
+            "cameraname": ""
+        }
+    ]
+  }
